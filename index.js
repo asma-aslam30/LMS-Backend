@@ -3,6 +3,7 @@ const cors = require('cors');
 
 const connectDB = require('./connectDb');
 const userRoutes = require('./routes/user');
+const studentRoutes = require('./routes/student');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/users', userRoutes);
+app.use('/api/student', studentRoutes)
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
