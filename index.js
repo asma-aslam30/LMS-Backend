@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.send('MongoDB connected with Express.js');
 });
 
-app.use('/users', userRoutes);
+app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
